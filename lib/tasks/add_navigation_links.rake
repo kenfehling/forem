@@ -20,7 +20,7 @@ namespace :navigation_links do
   tag_icon = twemoji_path("tag.svg")
   bulb_icon = twemoji_path("bulb.svg")
   shopping_icon = twemoji_path("shopping.svg")
-  heart_icon = twemoji_path("heart.svg")
+  # heart_icon = twemoji_path("heart.svg")
   rainbowdev = image_path("rainbowdev.svg")
 
   def perform_create_of_navigation_links?
@@ -192,20 +192,20 @@ namespace :navigation_links do
       position: 6,
       section: :default,
     )
-    NavigationLink.create_or_update_by_identity(
-      url: "#{base_url}/sponsors",
-      name: "Sponsors",
-      icon: heart_icon,
-      display_only_when_signed_in: false,
-      position: 7,
-      section: :default,
-    )
+    # NavigationLink.create_or_update_by_identity(
+    #   url: "#{base_url}/sponsors",
+    #   name: "Sponsors",
+    #   icon: heart_icon,
+    #   display_only_when_signed_in: false,
+    #   position: 7,
+    #   section: :default,
+    # )
     NavigationLink.create_or_update_by_identity(
       url: "#{base_url}/about",
       name: "About",
       icon: rainbowdev,
       display_only_when_signed_in: false,
-      position: 8,
+      position: 7,
       section: :default,
     )
     NavigationLink.create_or_update_by_identity(
@@ -213,7 +213,7 @@ namespace :navigation_links do
       name: "Contact",
       icon: contact_icon,
       display_only_when_signed_in: false,
-      position: 9,
+      position: 8,
       section: :default,
     )
 
